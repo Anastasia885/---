@@ -153,6 +153,7 @@ object-fit: contain;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0; /*картинка не должна ужиматься, но продолжает(*/
 }
 
 .cart__img-warp:hover {
@@ -200,21 +201,88 @@ object-fit: contain;
     object-fit: contain; /*помещение в родителя с сохранением пропорций*/
 }
 
+/*бургер*/
+.header__burger {
+    display: none;
+    position: relative;
+    width: 55px;
+    height: 33px;
+    z-index: 30;
+    margin-left: 23px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.header__burger::before,
+.header__burger::after {
+    content: "";
+    display: block;
+    background-color: #000000;
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    left: 0;
+    border-radius: 50px;
+}
+
+.header__burger::before {
+    top: 0;
+}
+
+.header__burger::after {
+    bottom: 0;
+}
+
+.header__burger-el {
+    display: block;
+    position: absolute;
+    background-color: #000000;
+    left: 0;
+    height: 5px;
+    width: 55px;
+    top: 14px;
+    border-radius: 50px;
+}
+
+.header__burger.active .header__burger-el {
+    height: 0;
+}
+
+.header__burger.active::before {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.header__burger.active::after {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+
 /*HEADER END*/
 
 /*HERO*/
+
 .hero {
     height: 573px;
     display: flex;
+    column-gap: 30px;
 }
 
-.hero__desc, .hero__slider {
+.hero__desc, 
+.hero__slider {
     height: 100%;
     position: relative;
 }
 
 .hero__desc {
-    flex: 0 0 100%;
+    flex: 0 0 100%;    
+}
+
+.hero__container{
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .hero__desc::after {
@@ -229,19 +297,57 @@ object-fit: contain;
     top: 0;
     right: 50%;
     z-index: -10;
-
 }
 
 .hero__content {
+    width: 38%;    
 }
 
-.title {
+.title, 
+.section_title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 117%; 
 }
 
-.subtitle-hero__subtitle {
+.subtitle {
+
 }
 
-.btn-hero__link {
+.hero__subtitle {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 133%;
+    margin-top: 25px;
+    margin-bottom: 31px;
+}
+
+.btn {
+    background: #FFBF42;
+    border-radius: 50px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #d49c2a;       
+}
+
+.btn:active {
+    transform: translate(0px, 1px);
+}
+
+.hero__link {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.14);
+    width: 256px;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 131.19%;
+    padding: 15px 20px;
 }
 
 .hero__slider {    
@@ -257,14 +363,14 @@ object-fit: contain;
     display: flex;
     position: absolute;
     margin-left: 46%;
-    bottom: 38%;
+    bottom: 8%;
 }
 
 .dot {
     margin-right: 14px;
     width: 12px;
     height: 12px;
-    border-radius: 50%;
+    border-radius: 50%;    
     background-color: #FFFFFF;
     cursor: pointer;
     transition: all 0.3;
@@ -289,5 +395,6 @@ object-fit: contain;
     height: 100%;
     object-fit: cover;
 }
+
 
 
