@@ -77,15 +77,10 @@
 .product__desc {
     padding: 18px 33px 24px; /*педдинги?*/
 }
-.product__name {
-}
-.product__info {
-}
+
 .product__buy {
     display: flex;
     justify-content: space-between;
-}
-.product__price {
 }
 .product__buy-btn {
     display: flex;
@@ -94,8 +89,14 @@
     padding: 9px 17px;
     font-size: 14px;
 }
-.btn {
-}
+
 
 /*PRODUCT END*/
+
+/* GALLERY*/
+
+.gallery__items {   
+    overflow-y: hidden;
+    overflow-x: auto;
+}
 }
