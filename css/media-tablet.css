@@ -33,4 +33,69 @@
     transform: translate(0%,0%);
     margin-left: 18%;
 }
+
+/*PRODUCT*/
+
+.product {
+    padding-bottom: 58px;
+}
+
+.product__subtitle {
+    margin: 0; /*???*/
+}
+
+.product__slider {
+    margin: 0;
+       
+}
+
+.product__slider-ctrls { 
+    display: none;   
+}
+  
+.product__list {
+    padding: 0px 17px 29px;
+    justify-content: flex-start;
+    overflow: auto;    
+}
+
+/*остановились здесь*/
+
+.product__item {
+    flex: 0 0 auto;
+}
+
+.product__img-wrap {
+    width: 100%;
+    height: 301px;
+}
+.product__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.product__desc {
+    padding: 18px 33px 24px; /*педдинги?*/
+}
+.product__name {
+}
+.product__info {
+}
+.product__buy {
+    display: flex;
+    justify-content: space-between;
+}
+.product__price {
+}
+.product__buy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 17px;
+    font-size: 14px;
+}
+.btn {
+}
+
+/*PRODUCT END*/
 }
