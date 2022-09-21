@@ -40,6 +40,13 @@ a {
     width: 100%;
     overflow: hidden; /*отсечение всего что выходит за пределы wrapper*/
     position: relative;
+    display: flex; 
+    flex-direction: column;   
+}
+
+.content-wrapp {
+    flex: 1 1 auto;
+
 }
 
 .container {
@@ -470,6 +477,11 @@ animation: jump 2s forwards alternate infinite; /*анимация*/
     width: 100%;
     top: 174px;    
 }
+
+.product__slider-ctrls .arrow {
+    position: absolute;
+}
+
   
 .arrow {
     width: 57px;
@@ -479,7 +491,7 @@ animation: jump 2s forwards alternate infinite; /*анимация*/
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    
     font-size: 0px;
     cursor: pointer;
     transition: all 0.3s;
@@ -725,3 +737,38 @@ animation: jump 2s forwards alternate infinite; /*анимация*/
 }
 
 /*FEETBACK END*/
+
+/*FOOTER*/
+
+.footer {
+    background: #FFBF42;
+    padding: 51px 0px 0px;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 81%;
+}
+
+.footer__link {
+    flex: 0 0 auto; /*запретили ужиматься кнопке*/
+}
+
+.footer__link::after {
+    transform: rotate(-135deg);
+    
+
+
+}
+
+.arrow {
+}
+
+/*FOOTER END*/
